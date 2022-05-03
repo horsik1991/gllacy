@@ -1,0 +1,27 @@
+.about {
+  color: #323232;
+  border-radius: 20px;
+  background: #fafad2 url("../images/common/about_pattern.png") repeat;
+  padding: 30px 25px;
+  font: 24px/30px "robotomedium", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.about__title {
+  grid-column: 1/-1;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.about__inner-wrap {
+  display: flex;
+  column-gap: 5px;
+}
+.features__icon {
+  position: relative;
+  top: -10px;
+}
+.features__description {
+  font-size: 16px;
+  line-height: 24px;
+}

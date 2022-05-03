@@ -1,0 +1,39 @@
+.promos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
+  margin-bottom: 40px;
+}
+.promos__inner-wrap {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.promo.choko {
+  background: #f0f url("../images/content/bg-choko.png") no-repeat;
+  background-size: cover;
+}
+.promo.raspberry {
+  background: #a52a2a url("../images/content/bg-rasp.png") no-repeat;
+  background-size: cover;
+}
+.promo {
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.promo__title {
+  padding: 0;
+  margin: 0;
+  font: 700 35px/35px "robotobold", sans-serif;
+}
+.promo__description {
+  font: 700 18px/18px "robotobold", sans-serif;
+}
+.promo__btn {
+  font: 700 18px/18px "robotobold", sans-serif;
+  align-self: flex-end;
+  margin-top: 45px;
+  padding: 15px 20px;
+}

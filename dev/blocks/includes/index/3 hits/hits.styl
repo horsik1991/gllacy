@@ -1,0 +1,35 @@
+.hits
+  display:grid
+  grid-template-columns: repeat(auto-fill, minmax(100px,265px))
+  gap:26px
+  margin-bottom: 40px
+  justify-content: center
+.hit
+  min-height: 350px
+  height: 100%
+  position: relative
+  display:grid
+  grid-template-areas "icon"  "." "price" "descr"
+  grid-template-rows: min-content 80px min-content min-content;
+  &__price
+    font:700 40px/25px "robotobold",sans-serif
+    text-shadow:0 2px 0 rgba(0,0,0,0.5)
+    grid-area price
+    margin-top: 70px
+    margin-bottom: 35px
+  &__rouble
+    position: relative
+    top: 7px
+  &__img
+    position: relative
+    z-index: -1
+    margin-top: -60px
+    border-radius 50%
+  &__description
+    grid-area descr
+    font:16px/22px "robotomedium",sans-serif
+    text-decoration: underline
+    text-align: center
+    color rgba(white,0.8)
+  &__icon
+    grid-area icon

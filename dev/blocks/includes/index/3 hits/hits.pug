@@ -1,0 +1,29 @@
+mixin hit(price,descr,imgUrl)
+    aside.hit
+        .hit__price=price
+            svg.hit__rouble(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="37px")
+                defs
+                    filter(filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="32px" height="37px")
+                    feOffset(in="SourceAlpha" dx="0" dy="1")
+                    feGaussianBlur( result="blurOut" stdDeviation="1.732")
+                    feFlood( flood-color="rgb(49, 50, 53)" result="floodOut")
+                    feComposite( operator="atop" in="floodOut" in2="blurOut")
+                    feComponentTransfer
+                    feFuncA(type="linear" slope="0.5")
+                    feMerge
+                g(filter="url(#Filter_0)")
+                path(fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M1.644,15.635 L5.326,15.635 L5.326,1.135 L14.215,1.135 C18.124,1.135 20.241,1.317 21.468,1.635 C25.105,2.590 27.877,5.862 27.877,10.953 C27.877,16.771 24.150,19.816 20.786,20.543 C19.241,20.861 17.442,20.998 14.533,20.998 L11.494,20.998 L11.494,23.725 L26.514,23.725 L26.514,29.089 L11.494,29.089 L11.494,32.998 L5.326,32.998 L5.326,29.089 L1.644,29.089 L1.644,23.725 L5.326,23.725 L5.326,20.998 L1.644,20.998 L1.644,15.635 ZM11.494,6.544 L11.494,15.589 L13.852,15.589 C16.397,15.589 17.650,15.407 18.514,15.089 C20.150,14.498 21.241,12.907 21.241,11.044 C21.241,8.726 19.696,7.135 17.650,6.771 C16.877,6.635 15.761,6.544 13.442,6.544 L11.494,6.544 Z")
+            span /кг
+        .hit__description=descr
+        img(alt=descr src=imgUrl width="267" height="267").hit__img
+        img.hit__icon(alt="иконка Хит" src="static/images/common/hit.png" width="58" height="58")
+
+
+section.hits.wrapper
+    h2.visuallyHidden Лучшие хиты вкусов
+    +hit('310','Сливочное с апельсиновым джемом и цитрусовой стружкой','static/images/common/1.png')
+    +hit('380','Сливочно-кофейное с кусочками шоколада','static/images/common/2.png')
+    +hit('355','Сливочно-клубничное с присыпкой из белого шоколада','static/images/common/3.png')
+    +hit('415','Сливочное крем-брюле с карамельной подливкой','static/images/common/4.png')
+
+

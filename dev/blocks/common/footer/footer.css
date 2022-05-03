@@ -1,0 +1,52 @@
+.footer {
+  min-height: 50px;
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  column-gap: 10px;
+}
+.footer__menu {
+  display: grid;
+  column-gap: 30px;
+  row-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  max-width: 330px;
+  justify-self: center;
+}
+.footer__item {
+  text-decoration: underline;
+  position: relative;
+  font: 13px/15px "robotoregular", sans-serif;
+}
+.footer__item:hover:before {
+  content: url("../images/icons/icon-heart.svg");
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: -20px;
+}
+.footer__item:hover {
+  font: 700 13px/15px "robotobold", sans-serif;
+  cursor: pointer;
+}
+.social > li {
+  border-radius: 50%;
+  height: 39px;
+  width: 39px;
+  background-color: transparent;
+  border: 3px solid rgba(255,255,255,0.5);
+  display: flex;
+}
+.social {
+  display: flex;
+  gap: 10px;
+  place-items: center;
+}
+.social__item {
+  position: relative;
+}
+.social__item > img {
+  width: 100%;
+}
+.social__item:hover {
+  background-color: rgba(0,255,170,0.5);
+}

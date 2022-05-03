@@ -1,0 +1,42 @@
+.footer
+  min-height: 50px
+  display: grid
+  grid-template-columns min-content 1fr max-content
+  column-gap:10px;
+  &__menu
+    display grid
+    column-gap:30px
+    row-gap:5px
+    grid-template-columns:1fr 1fr
+    max-width:330px
+    justify-self:center
+  &__item
+    text-decoration: underline
+    position: relative
+    font: 13px/15px "robotoregular",sans-serif
+    &:hover:before
+      content url('../images/icons/icon-heart.svg')
+      width: 15px
+      height: 15px
+      position: absolute
+      left: -20px
+    &:hover
+      font: 700 13px/15px "robotobold",sans-serif
+      cursor: pointer
+.social > li
+  border-radius:50%
+  height: 39px
+  width: 39px
+  background-color: transparent
+  border: 3px solid rgba(255,255,255,0.5);
+  display: flex;
+.social
+  display: flex
+  gap:10px;
+  place-items center
+  &__item
+    position: relative
+    & > img
+      width: 100%
+    &:hover
+      background-color:rgba(0,255,170, 0.5)

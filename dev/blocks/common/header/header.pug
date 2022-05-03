@@ -1,0 +1,42 @@
+header.header.wrapper
+    h1.visuallyHidden Магазин мороженого Глэйси
+    .logo
+        img(alt="Logo Glaccy" src="static/images/icons/logo.png" width="160" height="65")
+    nav.header__menu
+        ul.menu
+            li.menu__item.submenu Каталог
+                ul.submenu__items
+                    li.submenu__item.special Новинки
+                    li.submenu__item Сливочное
+                    li.submenu__item Щербеты
+                    li.submenu__item Фруктовый лед
+                    li.submenu__item Мелорин
+            li.menu__item Доставка и оплата
+            li.menu__item О компании
+    .header__user-menu
+        .header__innerWrap
+            .icons.icons--search
+                img(src="static/images/icons/icon-search.png")
+            form.search.displayNone
+                input(type="text" placeholder="Что ищем?")
+
+            .icons.icons--persArea
+                .icons--persArea-icon
+                    img(src="static/images/icons/icon-enter.png")
+                .icons--persArea-descr Вход
+            form.pers-area(style="display:none")
+                input.pers-area__input(type="email" placeholder="Электронная почта")
+                input.pers-area__input(type="password" placeholder="Пароль")
+                button(type="submit").button.pers-area__button Войти
+                .pers-area__innerWrap
+                    a(href="stub.html") Забыли пароль?
+                    a(href="stub.html") Новая регистрация
+
+
+            .icons.icons--cart
+                .icons--cart-icon
+                    img(src="static/images/icons/icon-cart.png")
+                .icons--cart-descr Пусто
+        .header__info.info-time С 10 до 20, ежедневно
+        .header__info.info-phone 8 812 450-25-25
+    
