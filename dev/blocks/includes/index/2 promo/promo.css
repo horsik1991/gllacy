@@ -4,6 +4,12 @@
   column-gap: 26px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 700px) {
+  .promos {
+    grid-template-columns: minmax(240px, 1fr);
+    row-gap: 26px;
+  }
+}
 .promos__inner-wrap {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

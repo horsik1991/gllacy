@@ -1,15 +1,13 @@
 .header {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: 150px 2fr 1fr;
   column-gap: 30px;
   width: 100%;
 }
 .header__menu {
   position: relative;
-  border: 2px solid #00f;
 }
 .header__user-menu {
-  border: 2px solid #00f;
   display: flex;
   flex-wrap: wrap;
   column-gap: 10px;

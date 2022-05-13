@@ -1,9 +1,11 @@
 $(document).ready(function(){
     let mainMenu = $('.header__menu > ul.menu');
-        // searchInput = $('.search'),
-        // search = $('.icons--search'),
-        // persAreaIcon = $('.icons--persArea'),
-        // persAreaForm = $('.pers-area'),
+    let navHeaderMenu = $('#headerMenu');
+    let headerUserMenu = $('.header__user-menu');
+    let searchInput = $('.search');
+    let search = $('.icons--search');
+    let persAreaIcon = $('.icons--persArea');
+    let persAreaForm = $('.pers-area');
     let header = $('.header');
     let subMenu = $('.submenu');
     let subMenuItems = $('.submenu__items');
@@ -11,37 +13,47 @@ $(document).ready(function(){
     console.log(winWidth);
     console.log(header);
     if (winWidth > 800){
-        mainMenu.removeClass('menu--mobile');
         subMenu.hover(function(){
             subMenuItems.stop().fadeToggle(300);
+            console.log('hover')
         })
     } else {
-        mainMenu.addClass('menu--mobile').removeClass('menu');
+        // mainMenu.addClass('menu--mobile').removeClass('menu');
+        navHeaderMenu.css({
+            'order': '3',
+            'grid-column' : '1/-1'
+        });
+        headerUserMenu.css({
+           'grid-column-end':'-1'
+        });
         subMenu.click(function(){
             subMenuItems.toggle(300);
+            console.log('click')
+
         });
 
     }
 
-//     subMenu.hide();
-//     if (winWidth  > 800){
-//         mainMenu.hover(function(){
-//             $(this).removeClass('menu--mobile');
-//             subMenu.stop().fadeToggle(300);
-//         });
-//     } else {
-//         mainMenu.click(function () {
-//             $(this).addClass('menu--mobile');
-//             // $('.submenu > .menu__sub').addClass('menu--mobile').removeClass('menu__sub');
-//             subMenu.toggle()
-//         });
-//     }
-//
-//     search.click(function(){
-//         searchInput.toggle()
-//     });
-//
-//     persAreaIcon.click(function () {
-//         persAreaForm.toggle();})
-//
+
+
+
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest(".submenu").length) {
+            subMenuItems.hide();
+        }
+        e.st
+        opPropagation();
+    });
+
+
+
+
+
+    search.click(function(){
+        searchInput.toggle()
+    });
+
+    persAreaIcon.click(function () {
+        persAreaForm.toggle();})
+
 });

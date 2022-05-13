@@ -9,12 +9,28 @@
   margin-top: 60px;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 700px) {
+  .info {
+    margin: 0;
+  }
+}
 .info__adress,
 .info__phone {
   font: 700 18px/24px "robotobold", sans-serif;
 }
+@media screen and (max-width: 700px) {
+  .info__adress,
+  .info__phone {
+    font: 700 14px/18px "robotobold", sans-serif;
+  }
+}
 .info__button {
   font: 700 17px/24px "robotobold", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  .info__button {
+    font: 700 12px/2px "robotobold", sans-serif;
+  }
 }
 .info__adress-title {
   margin-bottom: 10px;
@@ -22,6 +38,12 @@
 .info__adress,
 .info__alt-info {
   margin-bottom: 30px;
+}
+@media screen and (max-width: 700px) {
+  .info__adress,
+  .info__alt-info {
+    margin-bottom: 10px;
+  }
 }
 .info__phone-title,
 .info__phone {

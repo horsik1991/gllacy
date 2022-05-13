@@ -45,9 +45,13 @@ ul {
 .index-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -webkit-column-gap: 26px;
-  -moz-column-gap: 26px;
   column-gap: 26px;
+}
+@media screen and (max-width: 700px) {
+  .index-columns {
+    grid-template-columns: 1fr;
+    row-gap: 26px;
+  }
 }
 .button {
   border: none;
