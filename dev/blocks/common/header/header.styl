@@ -6,13 +6,6 @@
   @media screen and (min-width:280px) and (max-width:500px)
     grid-template-columns 1fr
     column-gap:0
-  &__menu
-    position: relative
-    @media screen and (max-width:800px)
-      order: 3
-      grid-column : 1/-1
-    @media screen and (max-width:470px)
-      display:none
   &__user-menu
     display: flex
     flex-wrap:wrap
@@ -38,18 +31,25 @@
   column-gap: 5px;
   row-gap:15px
   flex-wrap: wrap
+  position: relative
   &__item
       list-style none
       text-decoration:underline;
       font:700 16px/16px "robotobold", sans-serif
       padding: 10px 15px
       position: relative
+      align-self baseline
       &:hover
         background-color: rgba(255,255,255,0.5)
         cursor: pointer
         border-radius 5em
         text-decoration none
         color: #5a5a5a
+  @media screen and (max-width:800px)
+    order: 3
+    grid-column : 1/-1
+  @media screen and (max-width:470px)
+    display:none
 .submenu
   &__items
     display: none
@@ -72,15 +72,7 @@
         border-radius:10px 10px 0 0
       &:last-child
         border-radius:0 0 10px 10px
-.menu--mobile
-  display: inline-block
-  font:700 16px/16px "robotobold", sans-serif
-  position: relative
-  & .submenu__item:hover
-    cursor: pointer
-    text-decoration none
-    color: #fff
-    background-color: #fbbbb0;
+
 
 .icons
   &:not(.icons--menu)
@@ -163,3 +155,12 @@
 
 .special
   border-bottom 2px solid #333
+.menu--mobile
+  display: block
+  position: absolute;
+  top: 80px;
+  background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%;
+  color: rgb(51, 51, 51);
+  border-radius: 1em;
+  text-align: right;
+  right: 25px;

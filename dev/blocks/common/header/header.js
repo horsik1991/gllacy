@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    let mainMenuUl = $('.menu');
     let searchInput = $('.search');
     let search = $('.icons--search');
     let persAreaIcon = $('.icons--persArea');
@@ -6,21 +7,21 @@ $(document).ready(function(){
     let header = $('.header');
     let subMenu = $('.submenu');
     let subMenuItems = $('.submenu__items');
+    let mobileMenu = $('.icons--menu');
     let winWidth = window.screen.availWidth;
-    console.log(winWidth);
-    console.log(header);
     if (winWidth > 800){
         subMenu.hover(function(){
             subMenuItems.stop().fadeToggle(300);
-            console.log('hover')
         })
     } else {
         subMenu.click(function(){
             subMenuItems.toggle(300);
-            console.log('click')
         });
     }
+    mobileMenu.click(function(){
+        mainMenuUl.toggleClass('menu--mobile');
 
+    });
 //Функция закрытия подменю кликом по любому месту не являющемуся собственно блоком с подменю
     $(document).on('click', function(e) {
         if (!$(e.target).closest(".submenu").length) {
