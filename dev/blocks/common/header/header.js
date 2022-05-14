@@ -41,8 +41,7 @@ $(document).ready(function(){
         if (!$(e.target).closest(".submenu").length) {
             subMenuItems.hide();
         }
-        e.st
-        opPropagation();
+        e.stopPropagation();
     });
 
 
