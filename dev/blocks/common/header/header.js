@@ -1,7 +1,4 @@
 $(document).ready(function(){
-    let mainMenu = $('.header__menu > ul.menu');
-    let navHeaderMenu = $('#headerMenu');
-    let headerUserMenu = $('.header__user-menu');
     let searchInput = $('.search');
     let search = $('.icons--search');
     let persAreaIcon = $('.icons--persArea');
@@ -18,25 +15,13 @@ $(document).ready(function(){
             console.log('hover')
         })
     } else {
-        // mainMenu.addClass('menu--mobile').removeClass('menu');
-        navHeaderMenu.css({
-            'order': '3',
-            'grid-column' : '1/-1'
-        });
-        headerUserMenu.css({
-           'grid-column-end':'-1'
-        });
         subMenu.click(function(){
             subMenuItems.toggle(300);
             console.log('click')
-
         });
-
     }
 
-
-
-
+//Функция закрытия подменю кликом по любому месту не являющемуся собственно блоком с подменю
     $(document).on('click', function(e) {
         if (!$(e.target).closest(".submenu").length) {
             subMenuItems.hide();
@@ -44,15 +29,11 @@ $(document).ready(function(){
         e.stopPropagation();
     });
 
-
-
-
-
     search.click(function(){
         searchInput.toggle()
-    });
+    }); //end of search.CLICK
 
     persAreaIcon.click(function () {
-        persAreaForm.toggle();})
+        persAreaForm.toggle();}) //end of personalArea.CLICK
 
-});
+}); //end of READY

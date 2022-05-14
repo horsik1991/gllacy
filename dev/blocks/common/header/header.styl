@@ -3,8 +3,16 @@
   grid-template-columns 150px 2fr 1fr
   column-gap 30px
   width: 100%
+  @media screen and (min-width:280px) and (max-width:500px)
+    grid-template-columns 1fr
+    column-gap:0
   &__menu
     position: relative
+    @media screen and (max-width:800px)
+      order: 3
+      grid-column : 1/-1
+    @media screen and (max-width:470px)
+      display:none
   &__user-menu
     display: flex
     flex-wrap:wrap
@@ -13,12 +21,17 @@
     row-gap:10px
     font:700 14px/14px "robotomedium", sans-serif
     position: relative
+    @media screen and (max-width:800px)
+      grid-column-end -1
   &__info
     flex-basis 100%
     text-align: right
+    @media screen and (min-width:280px) and (max-width:500px)
+      text-align:left
   &__innerWrap
     display: flex;
     column-gap: 10px;
+    position: relative
 .menu
   display: flex
   justify-content: flex-start
@@ -70,7 +83,8 @@
     background-color: #fbbbb0;
 
 .icons
-  display: flex
+  &:not(.icons--menu)
+    display: flex
   column-gap:8px
   background-color: rgba(255,255,255,0.3)
   border-radius:5em
@@ -86,6 +100,18 @@
   &--persArea,
   &--cart
     padding:5px 15px
+  &--menu
+    display:none
+    position: absolute
+    padding:5px 15px
+    &-icon
+      fill:#fff
+      width: 20px
+      height:25px;
+    @media screen and (max-width:470px)
+      display: flex
+      top: -50px
+      right 0
 
 .pers-area
   display: grid
