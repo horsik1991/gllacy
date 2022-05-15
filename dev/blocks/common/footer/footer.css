@@ -4,6 +4,11 @@
   grid-template-columns: min-content 1fr max-content;
   column-gap: 10px;
 }
+@media screen and (max-width: 600px) {
+  .footer {
+    grid-template-columns: min-content 2fr 1fr;
+  }
+}
 .footer__menu {
   display: grid;
   column-gap: 30px;
@@ -11,6 +16,12 @@
   grid-template-columns: 1fr 1fr;
   max-width: 330px;
   justify-self: center;
+}
+@media screen and (max-width: 600px) {
+  .footer__menu {
+    column-gap: 0;
+    grid-template-columns: 1fr;
+  }
 }
 .footer__item {
   text-decoration: underline;
@@ -35,6 +46,13 @@
   background-color: transparent;
   border: 3px solid rgba(255,255,255,0.5);
   display: flex;
+}
+@media screen and (max-width: 600px) {
+  .social > li {
+    height: 20px;
+    width: 20px;
+    flex-wrap: wrap;
+  }
 }
 .social {
   display: flex;

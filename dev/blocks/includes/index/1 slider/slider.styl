@@ -40,7 +40,8 @@
 
 .slide
   text-align: center
-  width: 670px
+  width: 100%
+  max-width:640px
   margin:0 auto
   position: relative
   display grid
@@ -49,9 +50,16 @@
     font: 700 57px/60px "robotoblack",sans-serif
     align-self:end
     margin-bottom: 20px
+    @media screen and (max-width:600px)
+      font: 700 33px/40px "robotoblack",sans-serif
   &__image
+    background-image: url("static/images/content/1.png");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
     position: absolute
     z-index: -1
+    background-size: contain;
   &__gradient
     background:radial-gradient(circle, rgba(255,255,255,0.5), transparent 65%)
     position: absolute
@@ -63,5 +71,7 @@
     align-self: center;
   &__button
     justify-self center
+    @media screen and (max-width:600px)
+      font: 700 22px/30px "robotoblack",sans-serif
 
 

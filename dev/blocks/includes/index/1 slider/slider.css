@@ -43,7 +43,8 @@
 }
 .slide {
   text-align: center;
-  width: 670px;
+  width: 100%;
+  max-width: 640px;
   margin: 0 auto;
   position: relative;
   display: grid;
@@ -54,9 +55,19 @@
   align-self: end;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 600px) {
+  .slide__title {
+    font: 700 33px/40px "robotoblack", sans-serif;
+  }
+}
 .slide__image {
+  background-image: url("static/images/content/1.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
   position: absolute;
   z-index: -1;
+  background-size: contain;
 }
 .slide__gradient {
   background: radial-gradient(circle, rgba(255,255,255,0.5), transparent 65%);
@@ -70,4 +81,9 @@
 }
 .slide__button {
   justify-self: center;
+}
+@media screen and (max-width: 600px) {
+  .slide__button {
+    font: 700 22px/30px "robotoblack", sans-serif;
+  }
 }
