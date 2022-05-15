@@ -5,6 +5,11 @@
   margin-bottom: 40px;
   justify-content: center;
 }
+@media screen and (max-width: 600px) {
+  .hits {
+    grid-template-columns: repeat(auto-fit, minmax(30px, 150px));
+  }
+}
 .hit {
   min-height: 350px;
   height: 100%;
@@ -20,6 +25,12 @@
   margin-top: 70px;
   margin-bottom: 35px;
 }
+@media screen and (max-width: 601px) {
+  .hit__price {
+    margin-top: -60px;
+    margin-bottom: 10px;
+  }
+}
 .hit__rouble {
   position: relative;
   top: 7px;
@@ -29,6 +40,8 @@
   z-index: -1;
   margin-top: -60px;
   border-radius: 50%;
+  width: 100%;
+  max-width: 267px;
 }
 .hit__description {
   grid-area: descr;

@@ -4,6 +4,8 @@
   gap:26px
   margin-bottom: 40px
   justify-content: center
+  @media screen and (max-width:600px)
+    grid-template-columns: repeat(auto-fit,minmax(30px,150px));
 .hit
   min-height: 350px
   height: 100%
@@ -17,6 +19,9 @@
     grid-area price
     margin-top: 70px
     margin-bottom: 35px
+    @media screen and (max-width:601px)
+      margin-top: -60px
+      margin-bottom: 10px
   &__rouble
     position: relative
     top: 7px
@@ -25,6 +30,8 @@
     z-index: -1
     margin-top: -60px
     border-radius 50%
+    width:100%
+    max-width:267px
   &__description
     grid-area descr
     font:16px/22px "robotomedium",sans-serif
