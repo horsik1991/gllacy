@@ -6,6 +6,8 @@
   @media screen and (max-width: 700px)
     grid-template-columns minmax(240px, 1fr)
     row-gap:26px
+  @media screen and (max-width: 380px)
+    margin-bottom:20px
   &__inner-wrap
     -webkit-border-radius: 10px
     -moz-border-radius: 10px
@@ -25,8 +27,12 @@
     padding: 0
     margin: 0
     font:700 35px/35px "robotobold", sans-serif
+    @media screen and (max-width: 380px)
+      font:700 20px/22px "robotobold", sans-serif
   &__description
     font:700 18px/18px "robotobold", sans-serif
+    @media screen and (max-width: 380px)
+      font:700 20px/22px "robotobold", sans-serif
   &__btn
     font:700 18px/18px "robotobold", sans-serif
     align-self:flex-end

@@ -5,7 +5,7 @@
   margin-bottom: 40px;
   justify-content: center;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 610px) {
   .hits {
     grid-template-columns: repeat(auto-fit, minmax(30px, 150px));
   }
@@ -25,7 +25,7 @@
   margin-top: 70px;
   margin-bottom: 35px;
 }
-@media screen and (max-width: 601px) {
+@media screen and (max-width: 610px) {
   .hit__price {
     margin-top: -60px;
     margin-bottom: 10px;

@@ -8,6 +8,11 @@
   grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
+@media screen and (max-width: 540px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
 .about__title {
   grid-column: 1/-1;
   font-weight: bold;

@@ -8,6 +8,7 @@
   margin-left: auto;
   margin-top: 60px;
   margin-bottom: 60px;
+  position: relative;
 }
 @media screen and (max-width: 700px) {
   .info {
@@ -29,7 +30,7 @@
 }
 @media screen and (max-width: 700px) {
   .info__button {
-    font: 700 12px/2px "robotobold", sans-serif;
+    font: 700 12px/20px "robotobold", sans-serif;
   }
 }
 .info__adress-title {
@@ -49,6 +50,32 @@
 .info__phone {
   margin-bottom: 15px;
 }
+.info__close {
+  display: none;
+  font: 700 12px/20px "robotobold", sans-serif;
+  width: 15px;
+  height: 93%;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to bottom, #f26843, #e74a35);
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 5px;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+.info__close:hover {
+  background: linear-gradient(to top, #f26843, #e74a35);
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .info__close {
+    display: block;
+  }
+}
 .map +,
 .wrapper {
   display: flex;
@@ -58,6 +85,8 @@
   position: relative;
   background: rgba(255,255,255,0.7) url("../images/content/map.png") no-repeat;
   background-size: cover;
+  min-height: 360px;
+  width: 100%;
 }
 .map__pin {
   position: absolute;
