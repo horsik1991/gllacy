@@ -9,6 +9,12 @@
     grid-template-columns: min-content 2fr 1fr;
   }
 }
+@media screen and (max-width: 481px) {
+  .footer {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+}
 .footer__menu {
   display: grid;
   column-gap: 30px;
@@ -21,6 +27,13 @@
   .footer__menu {
     column-gap: 0;
     grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer__menu {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 100%;
   }
 }
 .footer__item {
