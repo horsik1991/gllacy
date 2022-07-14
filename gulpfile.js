@@ -25,7 +25,7 @@ function helpers (){
 
 // Работаем со стилями, а также подключаем библиотеки, которые находятся в LIBS
 function styles() {
-    return gulp.src(['dev/static/instruments/vars.styl','dev/static/instruments/helpers.styl','dev/static/libs/*.+(css|styl)','dev/blocks/**/*.styl'])
+    return gulp.src(['dev/static/instruments/vars.styl','dev/static/instruments/helpers.styl','dev/static/libs/*.+(css|styl)','dev/blocks/**/*.styl'],{allowEmpty:true})
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(concat('styles.styl'))
@@ -117,6 +117,5 @@ exports.default = gulp.series(
 //Для теста модулей
 exports.test = gulp.series(
     clean,
-    helpers,
-    styles
+    js
 );

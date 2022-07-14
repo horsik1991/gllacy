@@ -1,0 +1,79 @@
+ /* Слайдер */ 
+.hitsForSlick 
+    &.slick-slider
+        min-width:0;
+        position relative;
+    .slick-arrow
+        font-size:0;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        margin: -50px 0 0 0;
+        top:50%;
+        background-repeat: no-repeat;
+        background-clip: border-box;
+        background: url('../images/icons/arrow.svg')
+        border:0
+    .slick-arrow.slick-prev
+        transform:rotate(-90deg)
+        left:0;
+    .slick-arrow.slick-next
+        transform:rotate(90deg)
+        right:0; 
+    .slick-dots
+        display: flex
+        justify-content center
+        align-items center
+        li
+            background #e74a35
+            border: 1px solid #ac1000
+            width:10px
+            height:10px
+            margin:0 5px
+            border-radius 50%
+            &.slick-active
+                background #ac1000
+                border: 1px solid  #e74a35
+        button
+            font-size:0;
+            border:0
+            background transparent
+            padding: 0;
+            border: none;
+            color: inherit;
+            background-color: transparent;
+            &:focus,
+            &:active
+                border: none;
+                outline:none
+
+
+
+    
+ /* Слайдер запущен */ 
+.slick-slider.slick-initialized{} 
+/* Слайдер с точками */ 
+.slick-slider.slick-dotted	
+/* Ограничивающая оболочка */ 
+.slick-list 
+    overflow:hidden; 
+/* Лента слайдов */ 
+.slick-track
+    display:flex;
+/* Слайд */ 
+.slick-slide
+    margin:0 20px;
+/* Слайд активный (показывается) */ 
+.slick-slide.slick-active{} /* Слайд основной */ .slick-slide.slick-current{} /* Слайд по центру */ .slick-slide.slick-center{} /* Клонированный слайд */ .slick-slide.slick-cloned{}
+/* Стрелка */ 
+.slick-arrow{} 
+/* Стрелка влево */ 
+
+/* Стрелка не активная */ 
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */ 
+.slick-dots{} .slick-dots li{} 
+/* Активная точка */ 
+.slick-dots li.slick-active{} 
+/* Элемент точки */ 
+.slick-dots li button{} 

@@ -1,7 +1,7 @@
 .slider {
   margin-bottom: 40px;
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 1fr;
 }
 .slider__radio {
   column-gap: 5px;
@@ -66,7 +66,6 @@
   }
 }
 .slide__image {
-  background-image: url("../images/content/1.png");
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;

@@ -1,19 +1,26 @@
-
 section.slider.wrapper
     h2.visuallyHidden Слайдер с выбором мороженого
+    .slider__innerWrap.sliderForSlick
+        .slider__slide.slide
+            .slide__image
+                img(src="static/images/content/1.png" alt="Мороженое")
+            h3.slide__title Крем-брюле и пломбир с малиновым джемом
+            button.slide__button.button Давайте оба!
+            .slide__gradient
+        .slider__slide.slide
+            .slide__image
+                img(src="static/images/content/2.png" alt="Мороженое")
+            h3.slide__title Крем-брюле и пломбир с малиновым джемом
+            button.slide__button.button Давайте оба!
+            .slide__gradient
+        .slider__slide.slide
+            .slide__image
+                img(src="static/images/content/3.png" alt="Мороженое")
+            h3.slide__title Крем-брюле и пломбир с малиновым джемом
+            button.slide__button.button Давайте оба!
+            .slide__gradient
     .slider__radio.radio
-        .radio__inner-wrap
-            input.radio__input.visuallyHidden(type="radio" name="gallery" id="slide1" checked )
-            label.radio__label(for="slide1")
-        .radio__inner-wrap
-            input.radio__input.visuallyHidden(type="radio" name="gallery" id="slide2")
-            label.radio__label(for="slide2")
-        .radio__inner-wrap
-            input.radio__input.visuallyHidden(type="radio" name="gallery" id="slide3")
-            label.radio__label(for="slide3")
-    .slider__slide.slide
-        .slide__image
-        h3.slide__title Крем-брюле и пломбир с малиновым джемом
-        button.slide__button.button Давайте оба!
-        .slide__gradient
+
+
+
 

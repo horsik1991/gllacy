@@ -19,11 +19,14 @@ mixin hit(price,descr,imgUrl)
         img.hit__icon(alt="иконка Хит" src="static/images/common/hit.png" width="58" height="58")
 
 
-section.hits.wrapper
+
+section.wrapper
     h2.visuallyHidden Лучшие хиты вкусов
-    +hit('310','Сливочное с апельсиновым джемом и цитрусовой стружкой','static/images/common/1.png')
-    +hit('380','Сливочно-кофейное с кусочками шоколада','static/images/common/2.png')
-    +hit('355','Сливочно-клубничное с присыпкой из белого шоколада','static/images/common/3.png')
-    +hit('415','Сливочное крем-брюле с карамельной подливкой','static/images/common/4.png')
+    .hitsForSlick
+        +hit('310','Сливочное с апельсиновым джемом и цитрусовой стружкой','static/images/common/1.png')
+        +hit('380','Сливочно-кофейное с кусочками шоколада','static/images/common/2.png')
+        +hit('355','Сливочно-клубничное с присыпкой из белого шоколада','static/images/common/3.png')
+        +hit('415','Сливочное крем-брюле с карамельной подливкой','static/images/common/4.png')
+
 
 

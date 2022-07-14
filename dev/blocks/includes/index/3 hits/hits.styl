@@ -5,14 +5,18 @@
   margin-bottom: 40px
   justify-content: center
   @media screen and (max-width:610px)
-    grid-template-columns: repeat(auto-fit,minmax(30px,150px));
+   grid-template-columns: repeat(auto-fit,minmax(30px,150px));
 .hit
-  min-height: 350px
+  min-height: 320px
   height: 100%
+  max-width: 300px
   position: relative
   display:grid
   grid-template-areas "icon"  "." "price" "descr"
   grid-template-rows: min-content 80px min-content min-content;
+  // max-height:  350px
+  @media screen and (max-width:379px)
+    grid-template-rows min-content 210px min-content min-content
   &__price
     font:700 40px/25px "robotobold",sans-serif
     text-shadow:0 2px 0 rgba(0,0,0,0.5)
@@ -40,3 +44,7 @@
     color rgba(white,0.8)
   &__icon
     grid-area icon
+.swiper
+  width: 340px
+  height: 350px
+

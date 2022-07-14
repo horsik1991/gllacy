@@ -11,12 +11,18 @@
   }
 }
 .hit {
-  min-height: 350px;
+  min-height: 320px;
   height: 100%;
+  max-width: 300px;
   position: relative;
   display: grid;
   grid-template-areas: "icon" "." "price" "descr";
   grid-template-rows: min-content 80px min-content min-content;
+}
+@media screen and (max-width: 379px) {
+  .hit {
+    grid-template-rows: min-content 210px min-content min-content;
+  }
 }
 .hit__price {
   font: 700 40px/25px "robotobold", sans-serif;
@@ -52,4 +58,8 @@
 }
 .hit__icon {
   grid-area: icon;
+}
+.swiper {
+  width: 340px;
+  height: 350px;
 }

@@ -38,6 +38,13 @@
   column-gap: 10px;
   position: relative;
 }
+.header a {
+  color: inherit;
+}
+.header a:active,
+.header a:visited {
+  color: inherit;
+}
 .menu {
   display: flex;
   justify-content: flex-start;
