@@ -1,8 +1,8 @@
-$(document).ready(function(){
-    let slider = $('.sliderForSlick');
-    slider.slick({
-        arrow:false,
-        dots:true,
-        autoplay: false
-    })
-});
+// $(document).ready(function(){
+//     let slider = $('.sliderForSlick');
+//     slider.slick({
+//         arrow:false,
+//         dots:true,
+//         autoplay: false
+//     })
+// });
