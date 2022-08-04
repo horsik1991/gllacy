@@ -3,12 +3,15 @@
     &.slick-slider
         min-width:0;
         position relative;
+        max-width: 320px
+    .slick-slide
+        margin: 0 45px
     .slick-arrow
         font-size:0;
         width: 35px;
         height: 35px;
         position: absolute;
-        margin: -50px 0 0 0;
+        margin: -75px 0 0 0;
         top:50%;
         background-repeat: no-repeat;
         background-clip: border-box;
@@ -24,6 +27,7 @@
         display: flex
         justify-content center
         align-items center
+        margin-top 10px
         li
             background #e74a35
             border: 1px solid #ac1000
@@ -61,6 +65,7 @@
 .slick-track
     display:flex;
 /* Слайд */ 
+
 
 /* Слайд активный (показывается) */ 
 .slick-slide.slick-active{} /* Слайд основной */ .slick-slide.slick-current{} /* Слайд по центру */ .slick-slide.slick-center{} /* Клонированный слайд */ .slick-slide.slick-cloned{}

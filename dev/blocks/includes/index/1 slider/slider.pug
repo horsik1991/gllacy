@@ -1,28 +1,36 @@
-section.slider.wrapper
+section.gallery.wrapper
     h2.visuallyHidden Слайдер с выбором мороженого
-    .slider__innerWrap.sliderForSlick
-        .slider__slide.slide
-            .slide__image
+    .gallery__innerWrap.galleryForSlick
+        .gallery__slide.slide
+            .slide__image(style="background-image:url(static/images/content/1.png)")
                 //img(src="static/images/content/1.png" alt="Мороженое")
             h3.slide__title Крем-брюле и пломбир с малиновым джемом
             button.slide__button.button Давайте оба!
             .slide__gradient
-        //.slider__slide.slide
-        //    .slide__image
-        //        img(src="static/images/content/2.png" alt="Мороженое")
-        //    h3.slide__title Крем-брюле и пломбир с малиновым джемом
-        //    button.slide__button.button Давайте оба!
-        //    .slide__gradient
-        //.slider__slide.slide
-        //    .slide__image
-        //        img(src="static/images/content/3.png" alt="Мороженое")
-        //    h3.slide__title Крем-брюле и пломбир с малиновым джемом
-        //    button.slide__button.button Давайте оба!
-        //    .slide__gradient
-    .slider__radio.radio
-        input(type="radio" id="slide1" name="slider").radio__input
-        input(type="radio" id="slide2" name="slider").radio__input
-        input(type="radio" id="slide3" name="slider").radio__input
+        .gallery__slide.slide
+            .slide__image(style="background-image:url(static/images/content/2.png)")
+            h3.slide__title Крем-брюле и пломбир с малиновым джемом2
+            button.slide__button.button Давайте оба!
+            .slide__gradient
+        .gallery__slide.slide
+            .slide__image(style="background-image:url(static/images/content/3.png)")
+            h3.slide__title Крем-брюле и пломбир с малиновым джемом3
+            button.slide__button.button Давайте оба!
+            .slide__gradient
+    //- .gallery__radio.radio
+        .radio__innerWrap
+            input.radio__input.visuallyHidden(type="radio" id="slide1" name="slider" checked)
+            label.radio__label(for="slide1")
+            
+        .radio__innerWrap   
+            input.radio__input.visuallyHidden(type="radio" id="slide2" name="slider")
+            label.radio__label(for="slide2")
+            
+        .radio__innerWrap    
+            input.radio__input.visuallyHidden(type="radio" id="slide3" name="slider")
+            label.radio__label(for="slide3")
+            
+        
 
 
 

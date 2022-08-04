@@ -1,4 +1,4 @@
-.slider
+.gallery
   margin-bottom: 40px
   display:grid
   grid-template-columns:1fr
@@ -8,34 +8,31 @@
 
 .radio
   &__inner-wrap
-     display: inline-block
-     width: 100%;
-     max-width: 20px;
-     max-height: 20px;
-     height: 100%;
-     justify-content: center;
-     align-self: flex-end;
+    display: inline-block
+    width: 100%;
+    max-width: 20px;
+    max-height: 20px;
+    height: 100%;
+    justify-content: center;
+    align-self: flex-end;
   &__label
-     max-width: 20px
-     min-width: 10px
-     min-height: 10px
-     max-height: 20px
-     display: inline-block
-     width: 100%
-     height: 100%
+    width 20px
+    display: inline-block
+    width: 100%
+    height: 100%
   &__input + &__label:before
-     content:""
-     display: inline-block
-     width: 100%
-     height: 100%
-     border-radius 50%
-     background-color: transparent;
-     border 2px solid #fff;
+    content:""
+    display: inline-block
+    width: 100%
+    height: 100%
+    border-radius 50%
+    background-color: transparent;
+    border 2px solid #fff;
   &__input:not(:checked)+&__label:hover::before
     border:2px solid #00a32a
   &__input:checked + &__label:before
-     background-color: #008000
-     transition:all 0.4s ease
+    background-color: #008000
+    transition:all 0.4s ease
 
 
 .slide
@@ -54,14 +51,15 @@
      margin-bottom: 20px
      @media screen and (max-width:600px)
        font: 700 33px/40px "robotoblack",sans-serif
+
   &__image
-    background-image url('../images/content/1.png')
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     position: absolute
     z-index: -1
-    background-size: contain;
+    background-size:contain;
+    background-position:center;
   &__gradient
     background:radial-gradient(circle, rgba(255,255,255,0.5), transparent 65%)
     position: absolute
